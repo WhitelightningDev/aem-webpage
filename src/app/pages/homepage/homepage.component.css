@@ -1,0 +1,54 @@
+.body {
+  --primary: #04a389;
+  --secondary: #01809e;
+  --tertiary: #1e3463;
+  --bodyBackground: #ece1ce;
+}
+
+.share-container {
+  background-color: #01809e;
+  position: relative;
+  display: inline-block;
+}
+
+.share-options {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  color: black;
+  background: #ece1ce;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.share-options button {
+  color: black;
+  border: none;
+  background: none;
+  padding: 8px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.share-options button:hover {
+  border-radius: 5px;
+  color: white;
+  background: #01809e;
+}
+
+.welcomeContainer{
+  background-color: #ece1ce;
+}
+
+.maintext{
+  color:#1e3463;
+}
+
+.table th, .table td {
+  text-align: center;
+}

@@ -1,0 +1,13 @@
+.whatsapp-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  color: white;
+  font-size: 24px;
+  z-index: 1000;
+}
+
+.whatsapp-fab mat-icon {
+  font-size: 30px;
+}

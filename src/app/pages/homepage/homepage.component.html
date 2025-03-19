@@ -1,0 +1,334 @@
+<div class="px-3 py-5 text-center ">
+  <img class="d-block mx-auto mb-5 img-fluid border-bottom" src="./AEMlogo.png" alt="AEM Logo" style="max-width: 30%; height: auto;">
+  <h2 class="maintext fw-bold  mb-4 mt-5">AEM Primary Proviso Co-operative Medical Provision Plan</h2>
+
+  <div class="col-lg-6 col-md-8 mx-auto">
+    <p class="lead mb-4">
+      Welcome to AEM's Medical Investment Initiative.
+      This page provides insights into AEM's strategic expansion into the medical aid sector,
+      offering valuable opportunities for investors.
+    </p>
+  </div>
+
+  <!-- Share Button & YouTube Link -->
+  <div class="d-flex justify-content-center align-items-center gap-3">
+    <a href="https://www.youtube.com/@AEMKo-op" target="_blank">
+      <img placeholder="View Youtube Channel" class="mb-1" style="height: 55px;" src="/youtube.png" alt="YouTube">
+    </a>
+
+    <div class="share-container rounded-3 shadow p-2">
+      <button mat-icon-button class="btn btn-light" (click)="openShareOptions()">
+        <mat-icon>share</mat-icon>
+      </button>
+
+      <!-- Share Options -->
+      <div *ngIf="showShareOptions" class="share-options p-2">
+        <button *ngIf="canShareViaWhatsApp" class="btn btn-sm btn-success w-100 my-1" (click)="shareViaWhatsApp()">WhatsApp</button>
+        <button *ngIf="canShareViaEmail" class="btn btn-sm btn-primary w-100 my-1" (click)="shareViaEmail()">Email</button>
+        <button *ngIf="canShareViaSMS" class="btn btn-sm btn-secondary w-100 my-1" (click)="shareViaSMS()">Message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Objective Section -->
+<div class="container col-xxl-8 px-4 py-5">
+  <div class="row flex-column-reverse flex-lg-row align-items-center g-4 py-5">
+
+    <!-- Text Section -->
+    <div class="col-lg-6 text-center text-lg-start">
+      <h1 class="maintext display-6 fw-bold border-bottom lh-1 mb-3">Objective</h1>
+      <p class="lead">
+        To establish a member-driven medical provision fund within the existing AEM Primary
+        Proviso Co-operative. This fund will provide financial assistance to members for medical
+        costs, utilizing a pooled contribution system. This initiative is not an insurance or medical
+        aid scheme but rather a cooperative funding structure where members support each
+        other within available reserves.
+      </p>
+      <p class="lead">
+        There are no guarantees as assistance depends on the funds built up in the pools. In the early stages,
+        assistance will be proportional to members' contributions, ensuring sustainability and fairness.
+      </p>
+    </div>
+
+    <!-- Image Section -->
+    <div class="col-10 col-sm-8 col-lg-6 mx-auto">
+      <img src="/group.png" class="d-block mx-auto img-fluid " alt="Objective Image" style="max-width: 60%; height: auto;">
+    </div>
+  </div>
+</div>
+
+<div class="container border-bottom px-4 py-5" id="featured-3">
+  <h1 class="maintext pb-2 text-center">Fund Structure</h1>
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+        <img style="width: 40px;" src="/sign-up.png" alt="">
+      </div>
+      <h3 class="maintext fs-2 border-bottom">Member Account</h3>
+      <p> Members can make withdrawals or take loans against their
+        equity. This can be used for doctors’ visits and smaller expenses. You are in control
+        of what you use. </p>
+
+    </div>
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+        <img style="width: 45px;" src="/pool.png" alt="">
+      </div>
+      <h3 class="fs-2 maintext border-bottom">Reserve Pool</h3>
+      <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+    </div>
+  </div>
+  <p><strong>Contributions after fees are allocated as follows: </strong></p>
+      <ul>
+        <li>10% of member contributions are credited to the Member Account.</li>
+        <li>90% of member contributions are allocated to the Reserve Pool.</li>
+      </ul>
+</div>
+
+<div class="container border-bottom px-4 py-5">
+  <div class="row g-5 align-items-start">
+
+    <!-- Left Section: Example Grant Calculation -->
+    <div class="col-lg-6">
+      <h2 class="fw-bold text-body-emphasis mb-3">Example Grant Calculation</h2>
+      <p>The Board will define grant calculation criteria but may typically consider the following:</p>
+      <div class="p-3 border rounded-3 shadow-sm bg-light">
+        <p>
+          <strong>Example Scenario:</strong><br>
+          A member contributes <strong>R1,000</strong> per month with <strong>R15,000</strong> in reserves,
+          while the Co-op Reserve Pool holds <strong>R1,000,000</strong>. Previous grants received: <strong>R40,000</strong>.
+        </p>
+        <ul class="list-group">
+          <li class="list-group-item">Maximum Grant = 4 × reserve value = <strong>R60,000</strong></li>
+          <li class="list-group-item">OR 24 × monthly contribution = <strong>R24,000</strong></li>
+          <li class="list-group-item">OR 10% of total Reserve Pool = <strong>R100,000</strong></li>
+          <li class="list-group-item text-danger">Previous grants of <strong>R40,000</strong> reduce the available grant.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Section: Eligibility & Grant Calculator -->
+    <div class="col-lg-6">
+      <h2 class="fw-bold text-body-emphasis mb-3">Eligibility and Grant Calculation</h2>
+      <ul class="list-group">
+        <li class="list-group-item">1. Individual reserve pool contributions to date.</li>
+        <li class="list-group-item">2. Monthly contributions and contribution period of the member.</li>
+        <li class="list-group-item">3. Total reserve pool balance.</li>
+        <li class="list-group-item">4. Previous grants received by the member.</li>
+      </ul>
+
+      <!-- Grant Calculator -->
+      <div class="mt-4 p-3 border rounded-3 shadow-sm bg-light">
+        <h5 class="fw-bold">Grant Calculator</h5>
+        <form (submit)="calculateGrant(); $event.preventDefault()">
+          <div class="mb-3">
+            <label for="contribution" class="form-label">Monthly Contribution (R)</label>
+            <input type="number" [(ngModel)]="monthlyContribution" name="monthlyContribution" id="contribution" class="form-control" placeholder="Enter amount" required>
+          </div>
+          <div class="mb-3">
+            <label for="reserve" class="form-label">Reserve Pool Balance (R)</label>
+            <input type="number" [(ngModel)]="reserveBalance" name="reserveBalance" id="reserve" class="form-control" placeholder="Enter total reserve balance" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Calculate Grant</button>
+        </form>
+
+        <!-- Display Calculated Grant -->
+        <div *ngIf="calculatedGrant !== null" class="mt-3 alert alert-success">
+          <h5>Calculated Grant:</h5>
+          <p class="fw-bold">R{{ calculatedGrant }}</p>
+        </div>
+
+        <!-- Display Error Message -->
+        <div *ngIf="errorMessage" class="mt-3 alert alert-danger">
+          <p class="fw-bold">{{ errorMessage }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container border-bottom col-xxl-8 px-4 py-5">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="AEMlogo.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold maintext lh-1 mb-3">Ideal Member Profile</h1>
+      <p class="lead">The ideal participant in this fund is a member who maintains a healthy lifestyle, actively
+        avoids preventable illnesses, and is not a frequent visitor to doctors and hospitals.
+        Members who rarely claim from medical funds, prefer alternative healing methods, and
+        utilize natural remedies are best suited for this cooperative model. This ensures that
+        contributions accumulate over time, allowing the fund to remain sustainable while
+        assisting those in genuine need. Additionally, members should understand the risks
+        involved and be willing to contribute towards building long-term reserves.</p>
+    </div>
+  </div>
+</div>
+
+<div class="px-4 py-5 my-5 text-center">
+  <img class="d-block mx-auto mb-4" src="/presentation.png" alt="" width="120" height="120">
+  <h1 class="display-5 fw-bold maintext">Financial Projections</h1>
+  <div class="col-lg-6 text-start mt-3 mx-auto">
+    <ul>
+      <li>Existing Reserve Pool: R300,000. </li>
+      <li>Initial Member Base: 11 members. </li>
+      <li>Projected Monthly Contributions: R40,000 (average R4,545 per member). </li>
+      <li>Expected Growth: 1 new member per month contributing an average of R4,545. </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container px-4 border-bottom py-5" id="featured-3">
+  <h3 class="pb-2 maintext border-bottom"><i>Two scenarios are considered, now incorporating a 10% annual growth rate on
+    accumulated funds.</i></h3>
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center  bg-gradient fs-2 mb-3">
+        <img width="50px" src="/circle-1.png">
+      </div>
+      <h5 class="fs-5 maintext">Scenario 1: No Grants Paid Out </h5>
+     <ul>
+      <li><strong>Pool Growth:</strong>  With 90% of contributions allocated to reserves, and one
+        new member joining per month, the reserve pool will grow significantly over 10
+        years, with an additional 10% annual growth</li>
+        <li><strong>Account Growth:</strong>  10% of contributions are allocated here, growing at the same rate. </li>
+     </ul>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center  bg-gradient fs-2 mb-3">
+        <img width="50px" src="/circle-2.png">
+      </div>
+      <h5 class="fs-5 maintext">Scenario 2: 50% of Reserve Pool Value Granted Annually </h5>
+      <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5">
+  <h2 class="pb-2 border-bottom maintext">Projected Reserve Pool & Member Account Growth (10 Years)</h2>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Members</th>
+        <th>Total Monthly Contributions</th>
+        <th>Reserve Pool (No Grants)</th>
+        <th>Reserve Pool (50% Grants Paid)</th>
+        <th>Member Account</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>12</td>
+        <td>R54,540</td>
+        <td>R910,800</td>
+        <td>R910,800</td>
+        <td>R455,400</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>24</td>
+        <td>R109,080</td>
+        <td>R1,644,840</td>
+        <td>R1,644,840</td>
+        <td>R822,420</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>36</td>
+        <td>R163,620</td>
+        <td>R2,612,524</td>
+        <td>R2,612,524</td>
+        <td>R1,306,262</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>48</td>
+        <td>R218,160</td>
+        <td>R3,853,776</td>
+        <td>R3,853,776</td>
+        <td>R1,926,888</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>60</td>
+        <td>R272,700</td>
+        <td>R5,417,653</td>
+        <td>R5,417,653</td>
+        <td>R2,708,827</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>72</td>
+        <td>R327,240</td>
+        <td>R7,363,279</td>
+        <td>R7,363,279</td>
+        <td>R3,681,639</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>84</td>
+        <td>R381,780</td>
+        <td>R9,762,606</td>
+        <td>R9,762,606</td>
+        <td>R4,881,303</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>96</td>
+        <td>R436,320</td>
+        <td>R12,702,782</td>
+        <td>R12,702,782</td>
+        <td>R6,351,391</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>108</td>
+        <td>R490,860</td>
+        <td>R16,288,060</td>
+        <td>R16,288,060</td>
+        <td>R8,144,030</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>120</td>
+        <td>R545,400</td>
+        <td>R20,642,866</td>
+        <td>R20,642,866</td>
+        <td>R10,321,433</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="px-4 py-5 my-5 text-center">
+  <h3 class="display-5 fw-bold maintext">Key Takeaways</h3>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">Without grants, the Reserve Pool grows significantly due to consistent
+      contributions and a 10% annual growth factor.
+      With 50% annual grant distribution, the Reserve Pool still grows but at a slower
+      rate while maintaining sustainability.
+      The Member Account also grows steadily, providing financial liquidity for
+      members.</p>
+      <h3 class="display-5 fw-bold maintext">Management </h3>
+      <p class="lead mb-4">The Board are elected by and from the members.
+        A Management team by the members will be appointed to consider every application for
+        assistance. </p>
+        <h3 class="display-5 fw-bold maintext">Administration & Fees</h3>
+        <p class="lead mb-4">AEM is administered inhouse
+          using an online administration
+          system designed for pooling in
+          co-ops. Members apply online
+          and statements are available
+          24/7 online.
+          Fees on contributions between
+          1% and 10% based on a sliding
+          scale.
+          Monthly admin fees amount to 0.083% per month based on the value of the pools.</p>
+  </div>
+</div>
+
+

@@ -118,32 +118,7 @@
         <li class="list-group-item">4. Previous grants received by the member.</li>
       </ul>
 
-      <!-- Grant Calculator -->
-      <div class="mt-4 p-3 border rounded-3 shadow-sm bg-light">
-        <h5 class="fw-bold">Grant Calculator</h5>
-        <form (submit)="calculateGrant(); $event.preventDefault()">
-          <div class="mb-3">
-            <label for="contribution" class="form-label">Monthly Contribution (R)</label>
-            <input type="number" [(ngModel)]="monthlyContribution" name="monthlyContribution" id="contribution" class="form-control" placeholder="Enter amount" required>
-          </div>
-          <div class="mb-3">
-            <label for="reserve" class="form-label">Reserve Pool Balance (R)</label>
-            <input type="number" [(ngModel)]="reserveBalance" name="reserveBalance" id="reserve" class="form-control" placeholder="Enter total reserve balance" required>
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Calculate Grant</button>
-        </form>
 
-        <!-- Display Calculated Grant -->
-        <div *ngIf="calculatedGrant !== null" class="mt-3 alert alert-success">
-          <h5>Calculated Grant:</h5>
-          <p class="fw-bold">R{{ calculatedGrant }}</p>
-        </div>
-
-        <!-- Display Error Message -->
-        <div *ngIf="errorMessage" class="mt-3 alert alert-danger">
-          <p class="fw-bold">{{ errorMessage }}</p>
-        </div>
-      </div>
     </div>
   </div>
 </div>

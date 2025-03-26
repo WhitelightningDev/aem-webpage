@@ -130,10 +130,32 @@
     </div>
   </div>
 
-  <!-- GIF Added Here -->
-  <div class="text-center mt-4 col-lg-12 col-md-12 col-sm-12">
-    <img src="/AEMSTRUCTUREVIDEO.gif" width="100%" alt="Descriptive Text" class="img-fluid" style="max-width: 100%; height: auto;" />
+ <!-- GIF Section with Expand Button -->
+<div class="text-center mt-4 col-lg-12 col-md-12 col-sm-12">
+  <img src="/AEMSTRUCTUREVIDEO.gif" width="100%" alt="Descriptive Text" class="img-fluid"
+       style="max-width: 100%; height: auto;" id="gifPreview" />
+
+  <!-- Button to Open Modal -->
+  <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#gifModal">
+    View Larger
+  </button>
+</div>
+
+<!-- Modal for Enlarged GIF -->
+<div class="modal fade" id="gifModal" tabindex="-1" aria-labelledby="gifModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="gifModalLabel">Expanded View</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="/AEMSTRUCTUREVIDEO.gif" alt="Expanded GIF" class="img-fluid" style="width: 100%;" />
+      </div>
+    </div>
   </div>
+</div>
+
 
 </div>
 

@@ -52,3 +52,8 @@
 .table th, .table td {
   text-align: center;
 }
+
+
+.dashboradimag{
+  width: 100% !important;
+}
